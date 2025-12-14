@@ -1,0 +1,27 @@
+theme = "ananke"
+baseURL = "https://sevenkieran.github.io/"
+languageCode = "en-us"
+title = "Kieran Seven"
+
+[params]
+  mainSections = ["posts"]
+  heroTitle = "Kieran Seven"
+  heroSubTitle = "Engineer | Builder | Blogger"
+  heroButtonText = "View Projects"
+  heroButtonURL = "/projects/"
+  heroBackground = "/images/header.jpg"
+
+
+
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "projects"
+  name = "Projects"
+  url = "/projects/"
+  weight = 20
