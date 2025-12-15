@@ -1,27 +1,31 @@
-theme = "ananke"
 baseURL = "https://sevenkieran.github.io/"
 languageCode = "en-us"
 title = "Kieran Seven"
 
+theme = ["ananke"]
+resourceDir = "../resources"
+
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+enableRobotsTXT = true
+
+[sitemap]
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
+
 [params]
-  mainSections = ["posts"]
-  heroTitle = "Kieran Seven"
-  heroSubTitle = "Engineer | Builder | Blogger"
-  heroButtonText = "View Projects"
-  heroButtonURL = "/projects/"
-  heroBackground = "/images/header.jpg"
+author = "Kieran Seven"
+favicon = "images/Logo.svg"
+site_logo = ""
+description = ""
+background_color_class = "bg-near-black"
+recent_posts_number = 3
+text_color = "white-80"
 
-
-
-
-[[menu.main]]
-  identifier = "about"
-  name = "About"
-  url = "/about/"
-  weight = 10
 
 [[menu.main]]
   identifier = "projects"
   name = "Projects"
   url = "/projects/"
-  weight = 20
+  weight = 10

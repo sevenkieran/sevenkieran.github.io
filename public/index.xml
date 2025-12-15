@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kieran Seven</title>
+    <title>Welcome to my Portfolio on Kieran Seven</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Kieran Seven</description>
+    <description>Recent content in Welcome to my Portfolio on Kieran Seven</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Dec 2025 16:34:05 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 14 Dec 2025 16:31:14 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Projects</title>
-      <link>http://localhost:1313/projects/</link>
-      <pubDate>Sun, 14 Dec 2025 16:34:05 -0500</pubDate>
-      <guid>http://localhost:1313/projects/</guid>
-      <description>&lt;p&gt;These are my projects.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
@@ -23,11 +16,11 @@
       <description>&lt;p&gt;Hi, im kieran.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Hello World</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
-      <pubDate>Sun, 14 Dec 2025 16:22:33 -0500</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>&lt;p&gt;This is a test.&lt;/p&gt;</description>
+      <title>FSAE ECU Migration: Motec M150 Integration</title>
+      <link>http://localhost:1313/projects/fsae-ecu-migration/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/fsae-ecu-migration/</guid>
+      <description>Leading the transition from a PE3 to a Motec M150 ECU, implementing Volumetric Efficiency tuning and validating via dyno testing.</description>
     </item>
   </channel>
 </rss>
