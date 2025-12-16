@@ -1,0 +1,19 @@
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# VS Code / Editors (Optional)
+.vscode/
+.idea/
+# Node.js
+node_modules/
+package-lock.json
+yarn.lock
+
+# --- Hugo Essentials ---
+/public/
+
+# Temporary lock file created by Hugo while building.
+.hugo_build.lock

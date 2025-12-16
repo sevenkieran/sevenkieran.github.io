@@ -16,11 +16,18 @@
       <description>&lt;p&gt;Hi, im kieran.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>FSAE Wiring Harness</title>
+      <link>http://localhost:1313/projects/wiring-harness/</link>
+      <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/wiring-harness/</guid>
+      <description>Established a new process for designing and manufacturing a wiring harness.</description>
+    </item>
+    <item>
       <title>FSAE ECU Migration: Motec M150 Integration</title>
       <link>http://localhost:1313/projects/fsae-ecu-migration/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/fsae-ecu-migration/</guid>
-      <description>Leading the transition from a PE3 to a Motec M150 ECU, implementing Volumetric Efficiency tuning and validating via dyno testing.</description>
+      <description>Lead the transition from a PE3 to a Motec M150 ECU, implemented Volumetric Efficiency tuning and validated via dyno testing.</description>
     </item>
   </channel>
 </rss>

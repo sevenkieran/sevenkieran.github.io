@@ -1,51 +1,57 @@
 ---
 title: "FSAE ECU Migration: Motec M150 Integration"
 date: 2024-05-20
-summary: "Leading the transition from a PE3 to a Motec M150 ECU, implementing Volumetric Efficiency tuning and validating via dyno testing."
+summary: "Lead the transition from a PE3 to a Motec M150 ECU, implemented Volumetric Efficiency tuning and validated via dyno testing."
 featured_image: "/images/M1_tune1-5.png" 
 ---
 
 ## Project Overview
-As a member of the University Formula team, I led the electrical and controls migration for our competition vehicle. The objective was to replace a legacy PE3 Engine Control Unit (ECU) with a modern Motec M150. This upgrade was critical to unlock advanced data logging, finer control resolution, and a more robust fuel model for competition.
+I led the effort to migrate of NovaRacing's primary Electronic control system from a simple PE3 electronic Control Unit (ECU) to a fully-capable Motec M150. This upgrade was critical to unlock effective data logging, finer control resolution, and a more robust fuel model for competition. The M150 was selected for its
+1.  Custom firmware Support: Allowed for user-defined algorithms.
+2.	Telemetry Capabilities: Excellent data logging and visualization in real time.
+3.	I/O Density: Large number of inputs and outputs
+4.	Volumetric Efficiency (VE) Modeling: Transitioned from simple lookup tables to dynamic airflow calculations
 
-<!-- ![motec m150](/images/m150.png) -->
-{{< figure src="/images/m150.png" title="M150 ECU" class="w-50">}}
+{{< figure src="/images/m150.png" caption="M150 ECU" class="w-50">}}
 
 ## Technical Implementation
 
-### 1. Systems Architecture & Wiring
-The migration required a complete overhaul of the engine harness. I designed and routed the wiring to integrate the Motec M150 with our sensor suite. This involved:
+### 1. Hardware Integration
+The migration required an overhaul of the engine harness. I redesigned the wiring harness in order to work with the new pinout and configured the ECU with sensor calibrations and I/O control. This involved:
 * **Sensor Integration:** Calibrating and wiring pressure, temperature, and position sensors.
 * **Ignition Timing:** Using a timing light to mechanically verify and set the digital base timing offset, ensuring synchronization between the ECU and physical engine cycle.
 
 ### 2. Control Strategy: Alpha-N to Volumetric Efficiency
-One of the most significant engineering efforts was shifting our fuel modeling strategy.
-* **Legacy System:** Relied on "Alpha-N" (Throttle Position vs. RPM), which offers limited precision under varying load conditions.
-* **New System:** Implemented a **Volumetric Efficiency (VE)** model. This required calculating the theoretical mass airflow based on engine geometry and manifold pressure, then tuning the efficiency table. This shift allows the engine to adapt better to environmental changes (altitude, temperature) without manual re-tuning.
-
-
-
-[Image of car engine schematic]
+{{< figure src="/images/fuel_calc.png">}}
+The most challenging engineering effort was shifting our fuel modeling strategy.
+* **Legacy System:** Relied on "Alpha-N" (Throttle Pedal vs. RPM), which offers limited precision under varying load conditions.
+* **New System:** Implemented a **Volumetric Efficiency (VE)** model. This required modeling the airflow and fuel through the engine. This shift allows the engine to adapt better to environmental changes (temperature, transients) without manual re-tuning.
+{{< figure src="/images/dyno-etc.png" class="w-50" caption="Custom engine dyno for simple testing">}}
 
 
 ### 3. Validation & Tuning
 ![car on dyno](/images/car_on_dyno.jpg)
 
-To validate the system before track testing, I engineered a staged testing environment:
-* **Makeshift Dyno:** Assembled a powertrain stand to test startup, idle control, and sensor fidelity in a controlled, static environment.
-* **Chassis Dyno:** Once the base map was established, I managed the transition to a professional chassis dyno to optimize the ignition and fuel tables for peak torque and reliability.
+* **Chassis Dyno:** Once the base map was established, a professional chassis dyno was used to optimize the ignition and fuel tables for peak torque and reliability.
+
+![power curve](/images/power-curve.png)
 
 ## Key Challenges Solved
 
 **Legacy Debt & Documentation**
-The transition involved migrating untested and unmaintained code from previous years. I had to reverse-engineer parts of the legacy harness and debug logic errors in the firmware that had not been validated.
+The transition involved learning alot about how engines work and the absolute necessity for accurate control systems for proper engine performance. I learned about the necessity of documentation and how any wholes in it can cause hours of time spent troubleshooting simple problems.
 
 **The Learning Curve**
-Moving to Motec required mastering a new software ecosystem. I had to bridge the gap between theoretical control systems (learned in class) and practical application, specifically regarding the complex math behind the VE fluid dynamics model.
+Moving to Motec required mastering a new software ecosystem. I had to bridge the gap between theoretical control systems and practical application, specifically regarding the complex math behind the Volumetric Efficiency and fuel model.
 
 ## Outcome
-After 12 months of development, the system was successfully integrated and tuned. The vehicle now runs a fully closed-loop fuel control system with higher reliability and data granularity. This project developed my skills in:
+This was my first major project as a member of NovaRacing, which took almost a full year of hardwork before it was finally finished. With the help of an upperclassman mentor, I started out learning about the different components of the car by assembling the fuel and cooling systems on the dyno, followed by rewiring the harness to match the MoTeC pinout. Eventually, I took lead as we moved into the more theoretical, complex engine modeling part. After around 12 months of hardwork, the system was successfully integrated and tuned. Overall, it was great learning experience, that allowed me to earn a leadership position in NovaRacing. This project greatly developed my skills in:
+* **Learning complex technical skills from the ground up**
 * **Data Analysis & Engine Tuning**
-* **Embedded Systems Wiring**
+* **Wiring and pinouts**
 * **Control Theory Application**
-* **Project Management (Full lifecycle execution)**
+
+*Things you could include:*
+> - *Talk about the improvement in the data collection process*
+> - *Talk about the horsepower gains with the new tune*
+> - *Lambda reliability graphs?*

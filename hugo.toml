@@ -21,11 +21,17 @@ site_logo = ""
 description = ""
 background_color_class = "bg-near-black"
 recent_posts_number = 3
-text_color = "white-80"
+text_color = ""
 
 
-[[menu.main]]
-  identifier = "projects"
-  name = "Projects"
-  url = "/projects/"
-  weight = 10
+[params.ananke.social.follow]
+networks = [
+  'github',
+  'linkedin'
+]
+
+[params.ananke.social.github]
+username = 'sevenkieran'
+
+[params.ananke.social.linkedin]
+username = 'kieran-seven-137387275'
